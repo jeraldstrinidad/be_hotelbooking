@@ -25,8 +25,12 @@
       "dest": "/public/assets/$1"
     },
     {
-        "src": "/(.*)",
-        "dest": "/api/index.php"
+      "src": "/api/(.*)",
+      "dest": "/api/index.php"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
     }
   ],
   "env": {
