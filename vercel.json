@@ -1,14 +1,40 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "public/index.php",
+      "use": "vercel-php@0.6.0"
+    },
+    {
+      "src": "public/build/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "public/assets/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "routes": [
-    { "src": "/build/(.*)", "dest": "/public/build/$1" },
-    { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
-    { "src": "/(.*)", "dest": "public/index.php" }
+    {
+      "src": "/build/(.*)",
+      "dest": "/public/build/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/public/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/index.php"
+    }
   ],
   "env": {
+    "APP_NAME": "Laravel",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "https://yourprojectdomain.com",
+    "APP_URL": "https://be-hotelbooking.vercel.app",
+    "APP_KEY": "base64:qIIW4omzTsrYnAGnnCftRAxVgsY7xUX1Ne3S3NauSkE=",
+
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
     "APP_PACKAGES_CACHE": "/tmp/packages.php",
