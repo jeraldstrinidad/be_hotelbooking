@@ -24,20 +24,20 @@
       "dest": "/public/assets/$1"
     },
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "/public/index.php"
     },
     {
-      "src": "/(.*)",
-      "dest": "/public/index.php"
+      "src": "/api/(.*)",
+      "dest": "/api/index.php"
     }
   ],
   "env": {
     "APP_NAME": "Laravel",
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_URL": "https://yourprojectdomain.com",
-    "APP_KEY": "base64:YourAppKeyHere",
+    "APP_URL": "https://be-hotelbooking.vercel.app",
+    "APP_KEY": "base64:qIIW4omzTsrYnAGnnCftRAxVgsY7xUX1Ne3S3NauSkE=",
 
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -45,7 +45,6 @@
     "APP_ROUTES_CACHE": "/tmp/routes.php",
     "APP_SERVICES_CACHE": "/tmp/services.php",
     "VIEW_COMPILED_PATH": "/tmp",
-
     "CACHE_DRIVER": "array",
     "LOG_CHANNEL": "stderr",
     "SESSION_DRIVER": "cookie"
