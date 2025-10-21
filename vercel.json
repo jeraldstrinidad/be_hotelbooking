@@ -1,10 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "public/index.php", "use": "@vercel/php" },
-    { "src": "public/build/**/*", "use": "@vercel/static" },
-    { "src": "public/assets/**/*", "use": "@vercel/static" }
-  ],
   "routes": [
     { "src": "/build/(.*)", "dest": "/public/build/$1" },
     { "src": "/assets/(.*)", "dest": "/public/assets/$1" },
