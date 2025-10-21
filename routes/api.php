@@ -1,8 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\AuthController;
-use App\Http\Controllers\API\RoomController;
-use App\Http\Controllers\API\BookingController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\RoomController;
+use App\Http\Controllers\Api\BookingController;
 
 Route::post('register',[AuthController::class,'register']);
 Route::post('login',[AuthController::class,'login']);
